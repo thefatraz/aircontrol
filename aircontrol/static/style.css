@@ -96,3 +96,49 @@ input:focus {
     color: #0878c9;
     font-weight: bold;
 }
+/* Bố cục 3 cột */
+.main-layout {
+    display: grid;
+    grid-template-columns: 220px minmax(400px, 650px) 220px;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 95%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* Vị trí hình */
+.side-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Kích thước hình */
+.side-image img {
+    width: 100%;
+    max-width: 200px;
+    height: 350px;
+    object-fit: contain;
+}
+
+/* Khu vực điều khiển */
+.main-content {
+    width: 100%;
+    min-width: 0;
+}
+
+/* Điện thoại */
+@media (max-width: 900px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+
+    .side-image img {
+        max-width: 140px;
+        height: 180px;
+    }
+}
