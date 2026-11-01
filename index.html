@@ -1,0 +1,81 @@
+
+<
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điều khiển máy lạnh</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>❄️ HỆ THỐNG ĐIỀU KHIỂN MÁY LẠNH</h1>
+
+    <div class="main-layout">
+
+        <!-- HÌNH USAGI BÊN TRÁI -->
+        <div class="side-image">
+            <img src="{{ url_for('static', filename='hình usagi ngầu.jpg') }}"
+                 alt="Usagi ngầu">
+        </div>
+
+        <!-- GIAO DIỆN ĐIỀU KHIỂN Ở GIỮA -->
+        <div class="main-content">
+
+            <div class="container">
+
+                <div class="status-card">
+                    <h2>Trạng thái máy lạnh</h2>
+
+                    <p id="power">Đang tải...</p>
+                    <p>Nhiệt độ: <strong id="temperature">--</strong> °C</p>
+                    <p>Chế độ: <strong id="mode">--</strong></p>
+                    <p>Tốc độ quạt: <strong id="fan">--</strong></p>
+                </div>
+
+                <div class="control-card">
+                    <h2>Điều khiển máy lạnh</h2>
+
+                    <button onclick="sendCommand('Bật máy lạnh')">
+                        BẬT MÁY
+                    </button>
+
+                    <button class="off" onclick="sendCommand('Tắt máy lạnh')">
+                        TẮT MÁY
+                    </button>
+
+                    <h3>Điều chỉnh nhiệt độ</h3>
+
+                    <button onclick="sendCommand('Giảm nhiệt độ xuống 24 độ')">24°C</button>
+                    <button onclick="sendCommand('Chỉnh nhiệt độ 26 độ')">26°C</button>
+                    <button onclick="sendCommand('Chỉnh nhiệt độ 28 độ')">28°C</button>
+
+                    <h3>Nhập lệnh điều khiển</h3>
+
+                    <input id="commandInput" type="text"
+                           placeholder="Ví dụ: Bật máy lạnh, chỉnh 25 độ">
+
+                    <button onclick="submitCommand()">GỬI LỆNH</button>
+
+                    <p id="message"></p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- HÌNH USAGI BÊN PHẢI -->
+        <div class="side-image">
+            <img src="{{ url_for('static', filename='hình usagi ú.jpg') }}"
+                 alt="Usagi ú">
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
+

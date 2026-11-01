@@ -1,0 +1,145 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #dff3ff, #edf5ff);
+    min-height: 100vh;
+    padding: 30px 15px;
+    color: #243447;
+}
+
+.container {
+    max-width: 750px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #0878c9;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.status-card,
+.control-card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 22px;
+    box-shadow: 0 5px 20px rgba(0, 80, 140, 0.10);
+}
+
+h2 {
+    color: #0878c9;
+    margin-bottom: 20px;
+}
+
+.status-card p {
+    padding: 12px;
+    margin: 8px 0;
+    background: #f1f8ff;
+    border-radius: 8px;
+    font-size: 17px;
+}
+
+h3 {
+    margin: 22px 0 12px;
+    color: #34495e;
+}
+
+button {
+    border: none;
+    background: #0878c9;
+    color: white;
+    padding: 12px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #045b9b;
+    transform: translateY(-2px);
+}
+
+button.off {
+    background: #e74c3c;
+}
+
+button.off:hover {
+    background: #c0392b;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccd8e2;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #0878c9;
+}
+
+#message {
+    margin-top: 15px;
+    color: #0878c9;
+    font-weight: bold;
+}
+
+
+.main-layout {
+    display: grid;
+    grid-template-columns: minmax(150px, 1fr) minmax(400px, 2fr) minmax(150px, 1fr);
+    align-items: center;
+    gap: 25px;
+    width: 95%;
+    max-width: 1500px;
+    margin: 30px auto;
+}
+
+.side-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.side-image img {
+    width: 100%;
+    max-width: 250px;
+    height: 400px;
+    object-fit: contain;
+}
+
+.main-content {
+    min-width: 0;
+    width: 100%;
+}
+
+.main-content .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .side-image img {
+        height: 220px;
+    }
+}
