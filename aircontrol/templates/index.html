@@ -1,4 +1,5 @@
 
+```html
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -8,49 +9,77 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="container">
-        <h1>❄️ HỆ THỐNG ĐIỀU KHIỂN MÁY LẠNH</h1>
 
-        <div class="status-card">
-            <h2>Trạng thái máy lạnh</h2>
-            <p id="power">Đang tải...</p>
-            <p>Nhiệt độ: <strong id="temperature">--</strong> °C</p>
-            <p>Chế độ: <strong id="mode">--</strong></p>
-            <p>Tốc độ quạt: <strong id="fan">--</strong></p>
+    <div class="main-layout">
+
+        <!-- Hình bên trái -->
+        <div class="side-image">
+            <img src="{{ url_for('static', filename='hình usagi ngầu.jpg') }}"
+                 alt="Usagi ngầu">
         </div>
 
-        <div class="control-card">
-            <h2>Điều khiển máy lạnh</h2>
+        <!-- Khu vực điều khiển ở giữa -->
+        <div class="main-content">
+            <div class="container">
 
-            <button onclick="sendCommand('Bật máy lạnh')">
-                BẬT MÁY
-            </button>
+                <h1>❄️ HỆ THỐNG ĐIỀU KHIỂN MÁY LẠNH</h1>
 
-            <button class="off" onclick="sendCommand('Tắt máy lạnh')">
-                TẮT MÁY
-            </button>
+                <div class="status-card">
+                    <h2>Trạng thái máy lạnh</h2>
+                    <p id="power">Đang tải...</p>
+                    <p>Nhiệt độ: <strong id="temperature">--</strong> °C</p>
+                    <p>Chế độ: <strong id="mode">--</strong></p>
+                    <p>Tốc độ quạt: <strong id="fan">--</strong></p>
+                </div>
 
-            <h3>Điều chỉnh nhiệt độ</h3>
-            <button onclick="sendCommand('Giảm nhiệt độ xuống 24 độ')">
-                24°C
-            </button>
-            <button onclick="sendCommand('Chỉnh nhiệt độ 26 độ')">
-                26°C
-            </button>
-            <button onclick="sendCommand('Chỉnh nhiệt độ 28 độ')">
-                28°C
-            </button>
+                <div class="control-card">
+                    <h2>Điều khiển máy lạnh</h2>
 
-            <h3>Nhập lệnh điều khiển</h3>
-            <input id="commandInput" type="text"
-                   placeholder="Ví dụ: Bật máy lạnh, chỉnh 25 độ">
+                    <button onclick="sendCommand('Bật máy lạnh')">
+                        BẬT MÁY
+                    </button>
 
-            <button onclick="submitCommand()">GỬI LỆNH</button>
+                    <button class="off" onclick="sendCommand('Tắt máy lạnh')">
+                        TẮT MÁY
+                    </button>
 
-            <p id="message"></p>
+                    <h3>Điều chỉnh nhiệt độ</h3>
+
+                    <button onclick="sendCommand('Giảm nhiệt độ xuống 24 độ')">
+                        24°C
+                    </button>
+
+                    <button onclick="sendCommand('Chỉnh nhiệt độ 26 độ')">
+                        26°C
+                    </button>
+
+                    <button onclick="sendCommand('Chỉnh nhiệt độ 28 độ')">
+                        28°C
+                    </button>
+
+                    <h3>Nhập lệnh điều khiển</h3>
+
+                    <input id="commandInput" type="text"
+                           placeholder="Ví dụ: Bật máy lạnh, chỉnh 25 độ">
+
+                    <button onclick="submitCommand()">GỬI LỆNH</button>
+
+                    <p id="message"></p>
+                </div>
+
+            </div>
         </div>
+
+        <!-- Hình bên phải -->
+        <div class="side-image">
+            <img src="{{ url_for('static', filename='hình usagi ú.jpg') }}"
+                 alt="Usagi ú">
+        </div>
+
     </div>
 
     <script src="{{ url_for('static', filename='app.js') }}"></script>
+
 </body>
 </html>
+```
