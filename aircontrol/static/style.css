@@ -1,0 +1,98 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #dff3ff, #edf5ff);
+    min-height: 100vh;
+    padding: 30px 15px;
+    color: #243447;
+}
+
+.container {
+    max-width: 750px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #0878c9;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.status-card,
+.control-card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 22px;
+    box-shadow: 0 5px 20px rgba(0, 80, 140, 0.10);
+}
+
+h2 {
+    color: #0878c9;
+    margin-bottom: 20px;
+}
+
+.status-card p {
+    padding: 12px;
+    margin: 8px 0;
+    background: #f1f8ff;
+    border-radius: 8px;
+    font-size: 17px;
+}
+
+h3 {
+    margin: 22px 0 12px;
+    color: #34495e;
+}
+
+button {
+    border: none;
+    background: #0878c9;
+    color: white;
+    padding: 12px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #045b9b;
+    transform: translateY(-2px);
+}
+
+button.off {
+    background: #e74c3c;
+}
+
+button.off:hover {
+    background: #c0392b;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccd8e2;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #0878c9;
+}
+
+#message {
+    margin-top: 15px;
+    color: #0878c9;
+    font-weight: bold;
+}
